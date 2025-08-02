@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="app-title">TaskMaster</h1>
+            <p class="app-subtitle">Organize your day</p>
+        </header>
+
+        <main class="main-content">
+            <div class="todo-controls">
+                <div class="input-group">
+                    <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task...">
+                    <button id="add-btn" class="add-btn">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="filter-group">
+                    <button id="filter-all" class="filter-btn active">All</button>
+                    <button id="filter-active" class="filter-btn">Active</button>
+                    <button id="filter-completed" class="filter-btn">Completed</button>
+                </div>
+            </div>
+
+            <div class="todo-stats">
+                <span id="tasks-count" class="tasks-count">No Tasks</span>
+                <button id="clear-completed" class="clear-btn">Clear Completed</button>
+            </div>
+            <ul id="todo-list" class="todo-list">
+            </ul>
+        </main>
+
+        <footer class="app-footer">
+            <p>Drag and drop to reorder list</p>
+        </footer>
+    </div>
+
+    <!-- Task Added Dialog Box -->
+    <div id="task-dialog" class="dialog-box">
+        <div class="dialog-content">
+            <p id="dialog-message">Task Added Successfully!</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
